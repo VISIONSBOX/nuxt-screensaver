@@ -2,9 +2,14 @@
   <div>
     Nuxt module playground!
 
-    <Screensaver :idle-options="idleOptions" :z-index="1000">
-      <div class="whatever">Whatever you want ...</div>
-    </Screensaver>
+    <NuxtScreensaver
+      :idle-options="idleOptions"
+      :z-index="1000"
+    >
+      <div class="whatever">
+        Whatever you want ...
+      </div>
+    </NuxtScreensaver>
   </div>
 </template>
 
@@ -12,7 +17,7 @@
 const idleOptions = {
   idle: 5000,
   events: ['mousemove', 'mousedown', 'keydown', 'touchstart'],
-};
+}
 </script>
 
 <style>

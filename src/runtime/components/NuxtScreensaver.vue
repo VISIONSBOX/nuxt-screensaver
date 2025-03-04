@@ -1,12 +1,14 @@
 <template>
-  <div v-if="isActive" class="screensaver" :style="{ zIndex }">
+  <div
+    v-if="isActive"
+    class="screensaver"
+    :style="{ zIndex }"
+  >
     <slot>Replace this with whatever you want using the default slot</slot>
   </div>
 </template>
 
 <script setup>
-import IdleJs from 'idle-js';
-
 const props = defineProps({
   zIndex: {
     type: Number,
@@ -19,19 +21,21 @@ const props = defineProps({
       events: ['mousemove', 'mousedown', 'keydown', 'touchstart'],
     }),
   },
-});
-const isActive = ref(false);
+})
+const isActive = ref(false)
 
-if (import.meta.client) {
+onMounted(async () => {
+  const { default: IdleJs } = await import('idle-js')
+
   const idle = new IdleJs({
     onIdle: () => (isActive.value = true),
     onActive: () => (isActive.value = false),
     onHide: () => (isActive.value = false),
     ...props.idleOptions,
-  });
+  })
 
-  idle.start();
-}
+  idle.start()
+})
 
 // watchEffect(() => {
 //   if (isActive.value) {

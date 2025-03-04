@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "esnext"
-    // other options
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
   },
-  "extends": "./.nuxt/tsconfig.json",
+  // "extends": "./.nuxt/tsconfig.json",
   "exclude": ["dist", "node_modules", "playground"]
 }

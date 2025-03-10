@@ -1,6 +1,6 @@
 {
   "name": "nuxt-screensaver",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Screensaver component for Nuxt 3 Apps",
   "repository": "https://github.com/VISIONSBOX/nuxt-screensaver",
   "license": "MIT",

@@ -71,7 +71,7 @@ That's it! Screensaver-Component will appears after idle time ✨
 
 ## Contribution
 
-- https://www.npmjs.com/package/idle-js
+This module is based on [idle-js](https://www.npmjs.com/package/idle-js).
 
 <details>
   <summary>Local development</summary>
@@ -104,12 +104,12 @@ npm run release
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@nuxt/screensaver/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/@nuxt/screensaver
-[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxt/screensaver.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-downloads-href]: https://npm.chart.dev/@nuxt/screensaver
-[license-src]: https://img.shields.io/npm/l/@nuxt/screensaver.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/@nuxt/screensaver
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-screensaver/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/nuxt-screensaver
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-screensaver.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/nuxt-screensaver
+[license-src]: https://img.shields.io/npm/l/nuxt-screensaver.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/nuxt-screensaver
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
 

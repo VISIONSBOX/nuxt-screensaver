@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.6
+
+[compare changes](https://github.com/VISIONSBOX/nuxt-screensaver/compare/v0.1.5...v0.1.6)
+
+### 🏡 Chore
+
+- **release:** V0.1.5 ([1ee4756](https://github.com/VISIONSBOX/nuxt-screensaver/commit/1ee4756))
+
+### ❤️ Contributors
+
+- Fabian Kunde <fabian.kunde@visionsbox.de>
+
 ## v0.1.5
 
 [compare changes](https://github.com/VISIONSBOX/nuxt-screensaver/compare/v0.1.4...v0.1.5)

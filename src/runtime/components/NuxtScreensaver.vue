@@ -32,7 +32,6 @@ onMounted(async () => {
     events: ['mousemove', 'mousedown', 'keydown', 'touchstart'],
     onActive: () => { },
     onIdle: () => { },
-    onHide: () => { },
   }
 
   const mergedIdleOptions = { ...defaultIdleOptions, ...props.idleOptions }
@@ -47,10 +46,6 @@ onMounted(async () => {
     onActive: () => {
       isActive.value = false
       mergedIdleOptions.onActive()
-    },
-    onHide: () => {
-      isActive.value = false
-      mergedIdleOptions.onHide()
     },
   })
 

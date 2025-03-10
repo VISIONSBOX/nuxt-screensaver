@@ -17,14 +17,12 @@
 const idleOptions = {
   idle: 5000,
   events: ['mousemove', 'mousedown', 'keydown', 'touchstart'],
-  onActive: () => {
-    console.log('active')
-  },
   onIdle: () => {
     console.log('idle')
   },
-  onHide: () => {
-    console.log('hide')
+  onActive: () => {
+    console.log('active')
+    // alert('welcome back from idle')
   },
 }
 </script>

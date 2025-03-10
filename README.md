@@ -24,7 +24,7 @@ Screensaver component for Nuxt 3 Apps. Dispalys a overlay after idle time. Use c
 
 <!-- Highlight some of the features your module provide here -->
 
-- Screensaver component to show whatever you want after idle time
+- Screensaver component to show and do whatever you want after idle time
 
 ## Quick Setup
 
@@ -50,16 +50,19 @@ Add Component to app.vue with optional idleOptions
 
 ```js
 const idleOptions = {
+  // idle time in ms
   idle: 60000,
+  // events that will trigger the idle resetter
   events: ["mousemove", "mousedown", "keydown", "touchstart"],
-  onActive: () => {
-    console.log("active");
-  },
+  // callback function to be executed after idle time
   onIdle: () => {
     console.log("idle");
+    // do whatever you want here
   },
-  onHide: () => {
-    console.log("hide");
+  // callback function to be executed after back form idleness
+  onActive: () => {
+    console.log("active");
+    // do whatever you want here
   },
 };
 ```

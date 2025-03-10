@@ -51,7 +51,16 @@ Add Component to app.vue with optional idleOptions
 ```js
 const idleOptions = {
   idle: 60000,
-  events: ['mousemove', 'mousedown', 'keydown', 'touchstart'],
+  events: ["mousemove", "mousedown", "keydown", "touchstart"],
+  onActive: () => {
+    console.log("active");
+  },
+  onIdle: () => {
+    console.log("idle");
+  },
+  onHide: () => {
+    console.log("hide");
+  },
 };
 ```
 

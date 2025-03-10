@@ -27,23 +27,35 @@ const isActive = ref(false)
 onMounted(async () => {
   const { default: IdleJs } = await import('idle-js')
 
+  const defaultIdleOptions = {
+    idle: 60000,
+    events: ['mousemove', 'mousedown', 'keydown', 'touchstart'],
+    onActive: () => { },
+    onIdle: () => { },
+    onHide: () => { },
+  }
+
+  const mergedIdleOptions = { ...defaultIdleOptions, ...props.idleOptions }
+
   const idle = new IdleJs({
-    onIdle: () => (isActive.value = true),
-    onActive: () => (isActive.value = false),
-    onHide: () => (isActive.value = false),
-    ...props.idleOptions,
+    idle: mergedIdleOptions.idle,
+    events: mergedIdleOptions.events,
+    onIdle: () => {
+      isActive.value = true
+      mergedIdleOptions.onIdle()
+    },
+    onActive: () => {
+      isActive.value = false
+      mergedIdleOptions.onActive()
+    },
+    onHide: () => {
+      isActive.value = false
+      mergedIdleOptions.onHide()
+    },
   })
 
   idle.start()
 })
-
-// watchEffect(() => {
-//   if (isActive.value) {
-//     console.log('Screensaver is active');
-//   } else {
-//     console.log('Screensaver is inactive');
-//   }
-// });
 </script>
 
 <style lang="postcss" scoped>
